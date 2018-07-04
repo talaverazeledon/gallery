@@ -1,29 +1,92 @@
-h1{
-    color: red;
-    border:2px solid Blue;
+  /* flexbox setup */
+.flex-body {
+     color: white;
+     background-image: ("img_biker.jpg");
+     background-repeat: no-repeat
+     background-position: right top;
+     justify-content: space-around;
+     margin-right: 200px;
+     background-attachment: fixed;
+      max-width: 100%;
+     max-height: 100%;
+     display: flex;
+     center-fixed:no-repeat;
 }
-body{
-    color:white;
-    background-color: black;
-    text-align: center;
-    justify-content: space-around;
-    
+h1 {
+     color: red;
+     border: 2px solid Blue;
+     text-align: center;
 }
-
- img{
-     width:200px;
-     height:200px;
-     margin-right:20px;
-     margin-left:20px;
-     margin-top:20px;
-     flex-wrap:wrap;
+/* style gallery */
+.flex-gallery{
+     width: 90%;
+     margin: auto;
+     list-style: none;
+     padding: 20px;   
+     box-sizing: border-box;
+     display: block;  
+     flex-wrap: wrap;        
+     justify-content: space-around;
 }
-.modal{
-    position: fixed;
-    background: rgba(0,0,0,0.8);
-    top: 0;
-    left: 0;
-    width: 100;
-    height: 100;
+ /*fotos*/
+.gallery img {    /* 2  agrege punto gallery*/
+     width: 200px;
+     height: 200px;       /*ancho y alto de las fotos*/
+     margin-right: 20px;
+     margin-left: 20px;                                             
+     margin-top: 20px;
+     border-radius: 50%;  /*fotos redondas*/
+     padding: 20px;
 }
-
+/* modal style*/
+.modal{                                  /*lightbox virus desaparecio al escribirle este selector completo*/
+     display: none;
+}
+.modal:target{
+     display: block;
+     position: fixed;
+     background: rgba(0, 0, 0, 0.8);
+     top: 0; /* esta es el aspecto a modificar con la VENTANA INVISIBLE*/ /* 7borre PX despues de 0*/
+     left: 0;
+     width: 100%;
+     height: 100%;
+}
+.flex-img{
+     width: 100%;
+     height: 50%;
+     display: flex;     /*MARCO DE LA VIRUS*/
+     justify-content:center;
+     align-items:center;
+}
+.img a{
+     color: #fff;
+     font-size: 40px;                   /*botones atra y adelante*/
+     text-decoration: none;
+     margin: 0 10px;
+}
+.flex-img a:nth-chil(2) {
+     margin: 0;
+     height: 100%;
+     flex-shrink: 2;
+}
+.flex-img imagen{
+     width: 500px;          
+     height: 100%;
+     max-width: 100%;
+     border: 7px solid #fff;
+     box-sizing: border-box;
+}     
+ #cerrar {
+     display: block;
+     background: #fff;
+     width: 25px;
+     height: 25px;
+     margin: 15px auto;
+     text-align: center;
+     text-decoration: none;
+     font-size: 25px;
+     color: #000;
+     border-radius: 50%;
+     line-height: 25px;
+ }
+  
